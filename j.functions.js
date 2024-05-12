@@ -78,8 +78,47 @@
 
 // console.log(getProduct(5, 6));
 
-const calculateOddEven = (num) => (num % 2 === 0 ? "even" : "odd");
+// const calculateOddEven = (num) => (num % 2 === 0 ? "even" : "odd");
 
-console.log(calculateOddEven(2));
-console.log(calculateOddEven(41));
-console.log(calculateOddEven(23));
+// console.log(calculateOddEven(2));
+// console.log(calculateOddEven(41));
+// console.log(calculateOddEven(23));
+
+// ?WAF that converts dollars into cents.
+
+// const convertDollarToCents = (dollar) => dollar * 100;
+
+// const cents = convertDollarToCents(7);
+// console.log(`Cent value is ${cents}`);
+
+//? Write a function that takes “add”/“subtract”/”multiply”/”divide”
+//? and two numbers as parameters and perform appropriate operations.
+
+const performCalculation = (option, x, y) => {
+  let result;
+
+  switch (option) {
+    case "+":
+      result = x + y;
+      break;
+
+    case "-":
+      result = x - y;
+      break;
+
+    case "*":
+      result = x * y;
+      break;
+
+    case "/":
+      result = x / y;
+      break;
+
+    default:
+      console.log("Invalid option");
+  }
+
+  return result;
+};
+
+console.log(performCalculation("-", 7, 9));
