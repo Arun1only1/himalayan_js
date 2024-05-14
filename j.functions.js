@@ -94,31 +94,74 @@
 //? Write a function that takes “add”/“subtract”/”multiply”/”divide”
 //? and two numbers as parameters and perform appropriate operations.
 
-const performCalculation = (option, x, y) => {
-  let result;
+// const performCalculation = (option, x, y) => {
+//   let result;
 
-  switch (option) {
-    case "+":
-      result = x + y;
-      break;
+//   switch (option) {
+//     case "+":
+//       result = x + y;
+//       break;
 
-    case "-":
-      result = x - y;
-      break;
+//     case "-":
+//       result = x - y;
+//       break;
 
-    case "*":
-      result = x * y;
-      break;
+//     case "*":
+//       result = x * y;
+//       break;
 
-    case "/":
-      result = x / y;
-      break;
+//     case "/":
+//       result = x / y;
+//       break;
 
-    default:
-      console.log("Invalid option");
-  }
+//     default:
+//       console.log("Invalid option");
+//   }
 
-  return result;
+//   return result;
+// };
+
+// console.log(performCalculation("-", 7, 9));
+
+//? nested function
+
+// ? function returning function
+//  function inside a function is called nested function
+
+// const printValue = (value) => {
+//   console.log(value);
+// };
+
+// const doSum = (x) => {
+//   const performAdd = (y) => {
+//     let sum = x + y;
+
+//     return sum;
+//   };
+
+//   return performAdd;
+// };
+
+// const sthg = doSum(5);
+
+// const result = sthg(15);
+
+// console.log(result);
+
+// ?call back function
+// ? function passed as a parameter to another function
+
+const printValue = (value) => {
+  console.log(value);
 };
 
-console.log(performCalculation("-", 7, 9));
+const getANumber = () => {
+  return 100;
+};
+const getSum = (x, y, fn) => {
+  let sum = x + y;
+
+  fn(sum);
+};
+
+getSum(2, getANumber(), printValue);
